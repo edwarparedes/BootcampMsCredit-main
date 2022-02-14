@@ -38,4 +38,9 @@ public class CreditController {
     void dltCredit(@PathVariable("id") String id){
         service.delete(id);
     }
+
+    @GetMapping("/byClient/{clientId}")
+    public Flux<Credit> getByClientId(@PathVariable("clientId") String clientId){
+        return service.getByClientId(clientId);
+    }
 }

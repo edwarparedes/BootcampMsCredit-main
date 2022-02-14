@@ -16,4 +16,6 @@ public class Credit {
     private Double balance;
     private Double creditLimit;
 
+    private String clientId;
+
 }

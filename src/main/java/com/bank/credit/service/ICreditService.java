@@ -17,4 +17,6 @@ public interface ICreditService {
 
     void delete(String id);
 
+    Flux<Credit> getByClientId(String clientId);
+
 }

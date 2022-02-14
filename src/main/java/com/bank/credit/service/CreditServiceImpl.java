@@ -37,4 +37,9 @@ public class CreditServiceImpl implements ICreditService {
     public void delete(String id) {
         repository.deleteById(id).subscribe();
     }
+
+    @Override
+    public Flux<Credit> getByClientId(String clientId) {
+        return repository.findByClientId(clientId);
+    }
 }
